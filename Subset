@@ -1,0 +1,28 @@
+package randomizedQueuesAndDeques;
+
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+/**
+ * 
+ * @author Kelby
+ * CSIS2420
+ *
+ */
+public class Subset {
+
+	public static void main(String[] args) {
+        RandomizedQueue<String> q = new RandomizedQueue<String>();
+        args = new String[1];
+        args[0] = StdIn.readString();
+		int k = Integer.parseInt(args[0]);
+
+		while(k > 0){
+            String item = StdIn.readString();
+            q.enqueue(item);
+            k--;
+		}
+        for(String string: q){
+        	StdOut.println(string);
+        }
+    }
+}
